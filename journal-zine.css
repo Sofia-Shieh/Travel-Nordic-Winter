@@ -1,0 +1,128 @@
+/* Personal winter journal. Art and paper treatments remain separate from readable trip details. */
+@media screen {
+  :root { --navy:#15334d; --blue:#234ab2; --cobalt:#234ab2; --ice:#e1e5eb; --paper:#f2f0e8; --ink:#203b50; --muted:#63717a; --line:#d0d0c8; --mono:'Courier New',monospace; }
+  body { background:var(--paper); }
+  .masthead { background:rgba(242,240,232,.96); border-color:var(--line); }
+  .brand-mark,.chapter-nav a[aria-current="page"] { color:var(--blue); }
+  .eyebrow { letter-spacing:.15em; }
+  .brand-name,.day-folio,.photo-caption,.flight-direction,.flight-leg-meta,.transport-label { font-family:var(--mono),var(--sans); }
+  .chapter-nav a::after { background:var(--blue); }
+  .hero { width:min(1190px,calc(100% - 96px)); margin:30px auto 0; grid-template-columns:.92fr 1.08fr; min-height:0; background:transparent; color:var(--ink); overflow:visible; align-items:center; gap:35px; border-bottom:1px solid var(--line); padding-bottom:32px; }
+  .hero-copy { padding:25px 0 35px; min-height:0; }
+  .hero .eyebrow { color:var(--blue); max-width:350px; font:11px/1.9 var(--mono); }
+  .hero h1 { font:500 clamp(50px,5vw,76px)/1.3 var(--sans); letter-spacing:.025em; color:var(--blue); margin:28px 0 10px; }
+  .hero-english { color:var(--ink); font-size:clamp(25px,3vw,39px); line-height:1.4; max-width:420px; }
+  .hero-description { color:var(--muted); font-size:14px; line-height:2.15; margin-top:28px; max-width:340px; }
+  .hero-actions { margin-top:34px; gap:23px; }
+  .hero .button { background:transparent; color:var(--blue); border:0; border-bottom:1px solid var(--blue); padding:11px 0; min-height:45px; gap:24px; }
+  .hero .button:hover { background:transparent; color:var(--navy); transform:translateY(-2px); }
+  .hero .text-link { color:var(--muted); font-size:11px; border-color:var(--line); }
+  .hero-meta { border-color:var(--line); color:var(--muted); margin-top:48px; padding-top:20px; gap:32px; line-height:1.7; }
+  .hero-meta strong { font:21px/1.5 var(--mono); letter-spacing:-.06em; color:var(--ink); }
+  .hero-photo { overflow:visible; min-height:0; height:auto; max-width:100%; justify-self:center; width:clamp(310px,calc(60svh - 126px),510px); }
+  .hero-photo img { position:static; inset:auto; aspect-ratio:3/5; height:auto; object-fit:contain; background:transparent; animation:paperAppear 1s var(--ease) both; }
+  .hero-photo::after,.hero-folio { display:none; }
+  .photo-caption { position:static; margin-top:12px; display:flex; justify-content:space-between; gap:20px; align-items:center; color:var(--muted); font-size:9px; letter-spacing:.02em; line-height:1.8; }
+  .photo-caption strong { font:13px/1.5 var(--mono); color:var(--ink); }
+  .photo-caption .coords { font:9px/1.7 var(--sans); max-width:120px; text-align:right; }
+  .trip-strip { padding:24px 0 27px; }
+  .trip-strip strong { color:var(--blue); font-size:23px; }
+  .trip-strip>div+div { border-left:0; }
+  .section { padding:68px 0; }
+  .section-head h2,.page-heading h2 { font-size:clamp(30px,3.4vw,43px); font-weight:500; line-height:1.5; }
+  .page-heading { padding-top:48px; }
+  .page-heading p { font-size:13px; line-height:2; }
+  .notice { background:#e8e9e5; border-color:var(--blue); }
+  .map-panel { background:#e8e9e5; }
+  .map-land { fill:#dce1e2; stroke:#c9d3d8; }
+  .map-dot { fill:var(--blue); stroke:#e8e9e5; }
+  .map-stroke { stroke:var(--blue); }
+  .route-stops em { color:var(--blue); }
+  .route-stops strong { font-weight:500; }
+  .experiences { grid-template-columns:.82fr 1.18fr; gap:55px; align-items:center; }
+  .experience-photo { min-height:0; overflow:visible; }
+  .experience-photo img { position:static; height:auto; aspect-ratio:3/5; object-fit:contain; background:transparent; }
+  .experience-photo::after { display:none; }
+  .experience-caption { position:static; color:var(--ink); margin-top:18px; }
+  .experience-caption .eyebrow { color:var(--blue); }
+  .experience-caption h3 { font-size:24px; margin:9px 0; }
+  .experience-caption p { color:var(--muted); font-size:12px; }
+  .experience-item>span { color:var(--blue); }
+  .experience-item h3 { font-size:22px; line-height:1.65; }
+  .experience-item p { line-height:2; }
+  .experience-item .text-link { margin-top:9px; color:var(--blue); }
+  .day-nav { border-color:var(--line); margin-bottom:28px; gap:0; }
+  .day-nav a { padding:14px 6px 12px; }
+  .day-nav strong { font-family:var(--mono); font-size:25px; letter-spacing:-.08em; }
+  .day-nav a[aria-current="date"] { background:var(--blue); color:#f8f4e9; }
+  .day-nav a:hover { background:#e4e6e6; }
+  .day-nav a[aria-current="date"]:hover { background:var(--blue); }
+  .day-layout { grid-template-columns:.68fr 1.32fr; gap:45px; background:transparent; align-items:start; }
+  .day-art { min-height:0; overflow:visible; background:transparent; color:var(--ink); }
+  .day-art::after { display:none; }
+  .day-art img { position:static; inset:auto; height:auto; aspect-ratio:3/5; object-fit:contain; opacity:1; background:transparent; }
+  .day-folio { display:flex; justify-content:space-between; gap:16px; color:var(--blue); font-size:10px; line-height:1.6; letter-spacing:.04em; padding:0 0 13px; border-bottom:1px solid var(--line); margin-bottom:15px; }
+  .day-folio strong { font-weight:400; }
+  .day-art-copy { position:static; inset:auto; display:block; padding:19px 0 0; }
+  .day-art h3 { font:italic 29px/1.25 var(--serif); margin:0 0 15px; letter-spacing:-.02em; }
+  .day-art .night { border-color:var(--line); font-size:10px; padding-top:13px; color:var(--muted); }
+  .day-art .night strong { color:var(--ink); font-size:13px; line-height:1.8; }
+  .day-content { padding:30px 0 25px; background:transparent; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .day-content h3 { font:500 clamp(26px,2.5vw,32px)/1.6 var(--sans); margin:13px 0 16px; letter-spacing:0; }
+  .day-content .eyebrow { font:11px/1.8 var(--mono); color:var(--blue); letter-spacing:.08em; }
+  .day-deck { font-size:14px; line-height:2; padding-bottom:23px; }
+  .timeline { margin:30px 0; gap:27px; }
+  .timeline li { grid-template-columns:78px 1fr; gap:22px; }
+  .timeline time { font-size:11px; color:var(--blue); line-height:1.8; }
+  .timeline h4 { font-size:17px; line-height:1.6; margin-bottom:7px; }
+  .timeline p { font-size:14px; line-height:1.95; }
+  .day-note { background:#e6e9e7; border-left:2px solid var(--blue); padding:16px 20px; font-size:12px; line-height:1.95; }
+  .day-links { gap:16px; margin-top:25px; }
+  .day-links a { color:var(--blue); font-size:11px; }
+  .day-tools { margin-top:30px; }
+  .day-tools p { font-family:var(--mono); font-style:normal; letter-spacing:-.06em; color:var(--blue); }
+  .day-tools button { color:var(--blue); }
+  .stay-photo { height:auto; overflow:visible; }
+  .stay-photo img { aspect-ratio:3/5; height:auto; object-fit:contain; background:transparent; max-height:580px; }
+  .stay-photo figcaption { position:static; color:var(--muted); font:10px/1.8 var(--mono); text-shadow:none; margin-top:12px; }
+  .stay-copy h3 { font-size:36px; line-height:1.7; }
+  .stay { border-top-width:1px; }
+  .stay h3 { font-size:23px; }
+  .sleep-strip>div { background:#e0e4e7; }
+  .sleep-strip>div:nth-child(2),.sleep-strip>div:nth-child(3),.sleep-strip>div:nth-child(4) { background:#d2dde7; }
+  .sleep-strip strong { color:var(--blue); }
+  .flight-manifest { background:transparent; padding:26px 0; margin-top:12px; border-top:2px solid var(--blue); border-bottom:1px solid var(--line); }
+  .flight-heading h3 { font-size:25px; }
+  .flight-pair { gap:45px; }
+  .flight-airports strong { color:var(--blue); }
+  .flight-layover { color:var(--muted); }
+  .flight-footnote { line-height:1.9; }
+  .transport-row>span { border-color:var(--line); }
+  .roadbook,.budget-summary,.weather-panel { background:var(--blue); }
+  .roadbook h3 { font-size:27px; }
+  .road-steps strong { font:25px var(--serif); }
+  .check { padding:21px 0; }
+  .check small { line-height:1.95; }
+  .chapter-next strong { font-size:22px; margin-top:8px; }
+  .chapter-next>span:last-child,.footer .signature { color:var(--blue); }
+  .footer { margin-top:30px; }
+  .page.is-entering,.day.is-entering { animation:paperAppear .6s var(--ease) both; }
+  @keyframes paperAppear { from { opacity:0; transform:translateY(15px); } to { opacity:1; transform:translateY(0); } }
+}
+@media screen and (max-width:1050px) {
+  .hero { width:calc(100% - 56px); gap:25px; }.hero h1 { font-size:54px; }.hero-meta { gap:20px; }.hero-meta strong { font-size:18px; }
+  .day-layout { gap:28px; grid-template-columns:.72fr 1.28fr; }.day-content { padding-top:22px; }.day-content h3 { font-size:27px; }.timeline li { grid-template-columns:66px 1fr; gap:15px; }.experiences { gap:35px; }.stay-copy h3 { font-size:30px; }
+}
+@media screen and (max-width:760px) {
+  .hero { width:calc(100% - 36px); margin-top:0; grid-template-columns:1fr; gap:15px; padding-bottom:22px; }.hero-copy { padding:34px 0 8px; min-height:0; }.hero .eyebrow { font-size:9px; }.hero h1 { font-size:49px; margin:21px 0 7px; }.hero-english { font-size:29px; }.hero-description { font-size:13px; margin-top:22px; max-width:none; }.hero-actions { margin-top:24px; }.hero-meta { margin-top:29px; gap:25px; }.hero-meta strong { font-size:21px; }
+  .hero-photo { max-width:440px; justify-self:center; width:100%; height:auto; margin-top:13px; }.hero-photo img { max-height:620px; object-fit:contain; }.photo-caption { margin-top:10px; font-size:8px; }.photo-caption strong { font-size:11px; }.photo-caption .coords { font-size:9px; }
+  .trip-strip { padding:24px 0; }.trip-strip>div+div { padding-left:15px; }.trip-strip>div:nth-child(3) { padding-left:0; }.section { padding:43px 0; }.section-head h2,.page-heading h2 { font-size:30px; line-height:1.5; }.page-heading { padding-top:32px; }.page-heading p { font-size:12px; }
+  .experiences { grid-template-columns:1fr; gap:26px; }.experience-photo { max-width:440px; width:100%; margin:auto; }.experience-photo img { max-height:530px; object-fit:contain; }.experience-caption { margin-top:15px; }.experience-caption h3 { font-size:24px; }.experience-item h3 { font-size:21px; }
+  .day-nav { margin-bottom:25px; }.day-nav a { min-width:64px; padding:12px 5px; }.day-layout { grid-template-columns:1fr; gap:25px; }.day-art { display:grid; grid-template-columns:100px 1fr; gap:0 19px; align-items:end; }.day-folio { grid-column:1/-1; font-size:9px; margin-bottom:17px; }.day-art img { grid-column:1; grid-row:2; width:100%; height:auto; min-height:0; }.day-art-copy { grid-column:2; grid-row:2; padding:0; display:block; text-align:left; }.day-art-copy>div:last-child { text-align:left; }.day-art h3 { font-size:28px; line-height:1.2; margin-bottom:15px; }.day-art .night { font-size:9px; padding-top:12px; }.day-art .night strong { font-size:11px; line-height:1.8; }
+  .day-content { padding:25px 0; border-top:1px solid var(--line); }.day-content h3 { font-size:25px; line-height:1.55; margin:12px 0 15px; }.day-content .eyebrow { font-size:10px; }.day-content .day-deck { font-size:13px; line-height:2; }.timeline { gap:25px; margin:26px 0; }.timeline li { grid-template-columns:56px 1fr; gap:14px; }.timeline h4 { font-size:16px; }.day-content .timeline p { font-size:13px; line-height:1.95; }.day-note { font-size:12px; padding:14px 16px; }.day-links a { font-size:11px; }.day-tools { margin-top:3px; }
+  .stay-photo img { max-height:480px; }.stay-copy h3 { font-size:29px; }.flight-manifest { padding:23px 0; }.flight-pair { gap:28px; }.flight-heading h3 { font-size:23px; }.flight-intro { font-size:12px; }.flight-airports strong { font-size:28px; }.roadbook h3 { font-size:24px; }.chapter-next strong { font-size:19px; }.footer { margin-top:15px; }
+}
+@media screen and (max-width:359px) {
+  .hero h1 { font-size:43px; }.hero-english { font-size:25px; }.hero-meta { gap:18px; }.hero-meta strong { font-size:18px; }.day-art { grid-template-columns:88px 1fr; gap:0 14px; }.day-art h3 { font-size:24px; }.day-content h3 { font-size:23px; }.timeline li { grid-template-columns:1fr; gap:6px; }.timeline time { font-size:10px; }.section-head h2,.page-heading h2 { font-size:27px; }
+}
+@media (prefers-reduced-motion:reduce) { .page.is-entering,.day.is-entering,.hero-photo img { animation:none!important; } }
