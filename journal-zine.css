@@ -37,6 +37,22 @@
   .map-land { fill:#dce1e2; stroke:#c9d3d8; }
   .map-dot { fill:var(--blue); stroke:#e8e9e5; }
   .map-stroke { stroke:var(--blue); }
+  .route-grid { grid-template-columns:.83fr 1.17fr; gap:48px; align-items:start; }
+  .illustrated-map { background:transparent; padding:0; margin:0; min-height:0; overflow:visible; }
+  .map-heading { display:flex; justify-content:space-between; align-items:center; gap:14px; margin-bottom:16px; }
+  .map-heading .eyebrow { font:9px/1.7 var(--mono); color:var(--muted); letter-spacing:.08em; }
+  .map-heading .text-link { font-size:11px; white-space:nowrap; }
+  .map-art-link { display:block; overflow:hidden; outline-offset:5px; }
+  .illustrated-map .route-map { display:block; width:100%; height:auto; max-height:none; aspect-ratio:3/4; object-fit:contain; background:#f2f0e8; }
+  .map-legend { display:flex; gap:22px; flex-wrap:wrap; margin:18px 0 11px; font-size:11px; color:var(--ink); }
+  .map-legend span { display:flex; align-items:center; gap:9px; }
+  .map-legend i { display:inline-block; width:27px; height:0; border-top:2px solid #52748c; }
+  .map-legend .flight-key { border-top:2px dotted #23465f; }
+  .illustrated-map .small { font-size:11px; line-height:1.9; color:var(--ink); }
+  .map-disclaimer { margin-top:9px; font-size:10px; color:var(--muted); line-height:1.85; }
+  .route-stops { counter-reset:route-stop; }
+  .route-stops li { counter-increment:route-stop; padding-left:27px; }
+  .route-stops li::before { content:counter(route-stop); display:grid; place-items:center; width:20px; height:20px; left:-13px; top:2px; font:12px/1 var(--serif); color:var(--paper); border-width:2px; background:#23465f; }
   .route-stops em { color:var(--blue); }
   .route-stops strong { font-weight:500; }
   .experiences { grid-template-columns:.82fr 1.18fr; gap:55px; align-items:center; }
@@ -118,6 +134,7 @@
   .hero-photo { max-width:440px; justify-self:center; width:100%; height:auto; margin-top:13px; }.hero-photo img { max-height:620px; object-fit:contain; }.photo-caption { margin-top:10px; font-size:8px; }.photo-caption strong { font-size:11px; }.photo-caption .coords { font-size:9px; }
   .trip-strip { padding:24px 0; }.trip-strip>div+div { padding-left:15px; }.trip-strip>div:nth-child(3) { padding-left:0; }.section { padding:43px 0; }.section-head h2,.page-heading h2 { font-size:30px; line-height:1.5; }.page-heading { padding-top:32px; }.page-heading p { font-size:12px; }
   .experiences { grid-template-columns:1fr; gap:26px; }.experience-photo { max-width:440px; width:100%; margin:auto; }.experience-photo img { max-height:530px; object-fit:contain; }.experience-caption { margin-top:15px; }.experience-caption h3 { font-size:24px; }.experience-item h3 { font-size:21px; }
+  .route-grid { grid-template-columns:1fr; gap:30px; }.map-heading { margin-bottom:13px; }.map-heading .eyebrow { max-width:160px; font-size:8px; }.map-legend { margin-top:14px; gap:18px; }.illustrated-map .small { font-size:11px; }.map-disclaimer { font-size:10px; }
   .day-nav { margin-bottom:25px; }.day-nav a { min-width:64px; padding:12px 5px; }.day-layout { grid-template-columns:1fr; gap:25px; }.day-art { display:grid; grid-template-columns:100px 1fr; gap:0 19px; align-items:end; }.day-folio { grid-column:1/-1; font-size:9px; margin-bottom:17px; }.day-art img { grid-column:1; grid-row:2; width:100%; height:auto; min-height:0; }.day-art-copy { grid-column:2; grid-row:2; padding:0; display:block; text-align:left; }.day-art-copy>div:last-child { text-align:left; }.day-art h3 { font-size:28px; line-height:1.2; margin-bottom:15px; }.day-art .night { font-size:9px; padding-top:12px; }.day-art .night strong { font-size:11px; line-height:1.8; }
   .day-content { padding:25px 0; border-top:1px solid var(--line); }.day-content h3 { font-size:25px; line-height:1.55; margin:12px 0 15px; }.day-content .eyebrow { font-size:10px; }.day-content .day-deck { font-size:13px; line-height:2; }.timeline { gap:25px; margin:26px 0; }.timeline li { grid-template-columns:56px 1fr; gap:14px; }.timeline h4 { font-size:16px; }.day-content .timeline p { font-size:13px; line-height:1.95; }.day-note { font-size:12px; padding:14px 16px; }.day-links a { font-size:11px; }.day-tools { margin-top:3px; }
   .stay-photo img { max-height:480px; }.stay-copy h3 { font-size:29px; }.flight-manifest { padding:23px 0; }.flight-pair { gap:28px; }.flight-heading h3 { font-size:23px; }.flight-intro { font-size:12px; }.flight-airports strong { font-size:28px; }.roadbook h3 { font-size:24px; }.chapter-next strong { font-size:19px; }.footer { margin-top:15px; }
