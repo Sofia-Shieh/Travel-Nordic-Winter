@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100" role="img" aria-labelledby="title desc">
+<title id="title">EVE 到斯德哥尔摩返程衔接</title><desc id="desc">2月11日10:55从EVE起飞，经奥斯陆65分钟转机，14:55抵达ARN。2月12日15:00国际返程。</desc>
+<rect width="900" height="1100" rx="20" fill="#173c43"/>
+<g font-family="Arial,'Microsoft YaHei','PingFang SC',sans-serif" fill="#edf0ea">
+<text x="65" y="83" font-size="19" letter-spacing="4">11 FEB / THE WAY SOUTH</text><text x="65" y="158" font-size="48" font-weight="700">One connection.</text>
+<text x="65" y="203" font-size="23">一个中转，提前一晚抵达。</text>
+<path d="M110 310V750" fill="none" stroke="#aec5bc" stroke-width="3" stroke-dasharray="7 10"/>
+<g fill="#d4ac70"><circle cx="110" cy="310" r="11"/><circle cx="110" cy="530" r="11"/><circle cx="110" cy="750" r="11"/></g>
+<text x="165" y="319" font-size="50" font-weight="700">EVE</text><text x="165" y="361" font-size="25">10:55 起飞 · Evenes</text><text x="165" y="400" font-size="19" fill="#bacfc7">约08:30到还车点，按合同补油并拍照</text>
+<text x="165" y="539" font-size="50" font-weight="700">OSL</text><text x="165" y="581" font-size="25">12:45 到达 → 13:50 起飞</text><text x="165" y="620" font-size="19" fill="#d4ac70">转机65分钟 · 须确认受保障联程</text>
+<text x="165" y="759" font-size="50" font-weight="700">ARN</text><text x="165" y="801" font-size="25">14:55 抵达 · Stockholm</text><text x="165" y="840" font-size="19" fill="#bacfc7">机场酒店一晚 · 次日15:00国际返程</text>
+<path d="M65 910H835" stroke="#66877c"/><text x="65" y="954" font-size="23">¥1,159 / 人 · 用户截图参考</text><text x="65" y="993" font-size="19" fill="#bacfc7">托运23kg + 手提8kg，页面显示行李直达。</text><text x="65" y="1032" font-size="17" fill="#bacfc7">所有时间为当地时间；未出票，票价与保障以订单为准。</text>
+</g></svg>
